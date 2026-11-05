@@ -48,12 +48,10 @@ data/audit/*.log
 *.sqlite
 *.db
 
-# Keep folder structures with .gitkeep
-!data/input/.gitkeep
-!data/output/.gitkeep
-!data/quarantine/.gitkeep
-!data/audit/.gitkeep
-!reports/.gitkeep
+# Allow sample demonstration datasets for reviewer inspection
+!data/output/sample_analytical_encounters.csv
+!data/output/sample_analytical_encounters.parquet
+!data/quarantine/sample_quarantined_records.csv
 
 # Pytest / Coverage
 .pytest_cache/
