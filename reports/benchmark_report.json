@@ -1,0 +1,13 @@
+{
+  "benchmark_timestamp": "2026-11-05T23:26:12.326000Z",
+  "dataset_size": 102000,
+  "total_runtime_seconds": 11.524,
+  "throughput_records_per_second": 8851,
+  "valid_published": 97000,
+  "quarantined": 5000,
+  "reconciliation_status": "BALANCED",
+  "optimization_notes": {
+    "technique_applied": "Vectorized HMAC tokenization & column projection with SQLite WAL pragma",
+    "future_optimization": "Apache Arrow chunked streaming / DuckDB out-of-core pipeline for 10M+ scaling"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "run_id": "BENCHMARK_100000_1793901360",
+  "timestamp": "2026-11-05T17:56:12.260582+00:00",
+  "status": "SUCCESS",
+  "profiling_summary": {
+    "total_rows": 102000,
+    "total_columns": 14,
+    "exact_duplicate_rows": 2000,
+    "duplicate_percentage": 1.96,
+    "sensitive_column_count": 7,
+    "sensitive_columns": [
+      "patient_id",
+      "full_name",
+      "email",
+      "phone_number",
+      "national_id",
+      "birth_date",
+      "gender"
+    ]
+  },
+  "reconciliation": {
+    "input_records": 102000,
+    "valid_records": 97000,
+    "quarantined_records": 5000,
+    "published_records": 97000,
+    "formula_check": "102000 == 97000 (valid) + 5000 (quarantined)",
+    "is_count_balanced": true
+  },
+  "quarantine_reasons": {
+    "DUPLICATE_PRIMARY_KEY": 1953,
+    "MISSING_REQUIRED_FIELD": 1015,
+    "MALFORMED_EMAIL": 511,
+    "INVALID_DOMAIN_VALUE": 508,
+    "REFERENTIAL_INTEGRITY_VIOLATION": 507,
+    "MALFORMED_TIMESTAMP": 506
+  }
+}

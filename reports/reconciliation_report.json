@@ -1,0 +1,42 @@
+{
+  "run_id": "BENCHMARK_100000_1793901360",
+  "generated_at": "2026-11-05T17:56:12.259906+00:00",
+  "reconciliation_status": "BALANCED",
+  "counts": {
+    "input_records": 102000,
+    "valid_records": 97000,
+    "quarantined_records": 5000,
+    "published_records": 97000,
+    "formula_check": "102000 == 97000 (valid) + 5000 (quarantined)",
+    "is_count_balanced": true
+  },
+  "financial_aggregate_reconciliation": {
+    "source_valid_cost_sum": 77214744.25,
+    "published_cost_sum": 77214744.25,
+    "difference": 0.0,
+    "is_cost_balanced": true
+  },
+  "quarantine_summary": {
+    "total_quarantined": 5000,
+    "breakdown_by_reason": {
+      "DUPLICATE_PRIMARY_KEY": 1953,
+      "MISSING_REQUIRED_FIELD": 1015,
+      "MALFORMED_EMAIL": 511,
+      "INVALID_DOMAIN_VALUE": 508,
+      "REFERENTIAL_INTEGRITY_VIOLATION": 507,
+      "MALFORMED_TIMESTAMP": 506
+    }
+  },
+  "published_distribution_summary": {
+    "diagnosis_frequencies": {
+      "J06.9": 12389,
+      "M54.5": 12219,
+      "E78.5": 12152,
+      "K21.9": 12150,
+      "E11.9": 12130,
+      "F41.1": 12048,
+      "J45.9": 12004,
+      "I10": 11908
+    }
+  }
+}
