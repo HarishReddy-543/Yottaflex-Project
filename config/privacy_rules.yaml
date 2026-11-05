@@ -1,0 +1,70 @@
+rules_version: "1.0.0"
+
+# Sensitive Field Profiling Patterns & Thresholds
+profiling:
+  pii_patterns:
+    email: "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$"
+    phone: "^(\\+\\d{1,3}[- ]?)?\\(?\\d{3}\\)?[-. ]?\\d{3}[-. ]?\\d{4}$"
+    national_id: "^\\d{3}-\\d{2}-\\d{4}$"
+  cardinality_threshold: 0.8 # high uniqueness ratio suggests identifiers
+
+# Privacy Transformations
+transformations:
+  tokenization:
+    - field: "patient_id"
+      target_field: "patient_token"
+      algorithm: "HMAC-SHA256"
+      prefix: "TOK_PAT_"
+      deterministic: true
+
+    - field: "national_id"
+      target_field: "national_id_token"
+      algorithm: "HMAC-SHA256"
+      prefix: "TOK_NID_"
+      deterministic: true
+
+  masking:
+    - field: "full_name"
+      target_field: "masked_name"
+      strategy: "name_initial_mask" # "R*** K****"
+      preserve_length: false
+
+    - field: "email"
+      target_field: "masked_email"
+      strategy: "email_mask" # "ra***@domain.com"
+
+    - field: "phone_number"
+      target_field: "masked_phone"
+      strategy: "phone_last4" # "***-***-1234"
+
+  generalization:
+    - field: "birth_date"
+      target_field: "age_group"
+      strategy: "date_to_age_bracket" # "<18", "18-29", "30-49", "50-64", "65+"
+      reference_date: "2026-01-01"
+
+# Data Minimization: Exact columns retained in the final analytical publishing layer
+minimized_analytical_columns:
+  - "encounter_id"
+  - "patient_token"
+  - "masked_name"
+  - "masked_email"
+  - "gender"
+  - "age_group"
+  - "provider_id"
+  - "diagnosis_code"
+  - "diagnosis_desc"
+  - "treatment_cost"
+  - "encounter_timestamp"
+  - "run_id"
+  - "published_at"
+
+# Fields dropped completely from final analytical dataset
+dropped_sensitive_fields:
+  - "patient_id"
+  - "full_name"
+  - "email"
+  - "phone_number"
+  - "national_id"
+  - "national_id_token"
+  - "birth_date"

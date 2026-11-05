@@ -1,0 +1,26 @@
+pipeline:
+  name: "privacy-aware-data-pipeline"
+  version: "1.0.0"
+  environment: "local"
+  random_seed: 42
+  hmac_secret_salt: "yottaflex_secure_salt_2026_x89f"
+
+storage:
+  db_path: "data/audit/pipeline_metadata.sqlite"
+  input_dir: "data/input"
+  output_dir: "data/output"
+  quarantine_dir: "data/quarantine"
+  reports_dir: "reports"
+  target_format: "both" # "csv", "parquet", or "both"
+
+dataset_generator:
+  default_sample_size: 500
+  large_dataset_size: 100000
+  invalid_ratio: 0.05
+  duplicate_ratio: 0.03
+  seed: 42
+
+execution:
+  batch_size: 25000
+  log_level: "INFO"
+  idempotent_mode: "upsert" # "upsert" or "fail_on_collision"

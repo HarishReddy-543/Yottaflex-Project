@@ -1,0 +1,16 @@
+# Core Data Engineering & Processing
+pandas>=2.2.0
+pyarrow>=15.0.0
+numpy>=1.26.0
+pyyaml>=6.0.1
+pydantic>=2.7.0
+
+# Testing & Quality
+pytest>=8.0.0
+
+# Synthetic Data Generation
+Faker>=24.0.0
+
+# Visual Analytics & Dashboard (Optional/Bonus UI)
+streamlit>=1.35.0
+rich>=13.7.0

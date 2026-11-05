@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Pipeline run artifacts and local databases (keep templates, track reports)
+data/output/*.csv
+data/output/*.parquet
+data/quarantine/*.csv
+data/quarantine/*.parquet
+data/audit/*.db
+data/audit/*.sqlite
+data/audit/*.log
+*.sqlite
+*.db
+
+# Keep folder structures with .gitkeep
+!data/input/.gitkeep
+!data/output/.gitkeep
+!data/quarantine/.gitkeep
+!data/audit/.gitkeep
+!reports/.gitkeep
+
+# Pytest / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
