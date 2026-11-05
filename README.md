@@ -8,7 +8,7 @@
 > **YottaFlex AI Recruitment Drive — 72-Hour Code Challenge**  
 > **Role**: Associate AI Forward Deployed Engineers · AI Data Forward Deployed Engineer  
 > **Candidate**: Harish Reddy (`hr3509367@gmail.com`)  
-> **Repository**: [Public GitHub Repository Link]
+> **Repository**: [https://github.com/HarishReddy-543/Yottaflex-Project](https://github.com/HarishReddy-543/Yottaflex-Project)
 
 ---
 
