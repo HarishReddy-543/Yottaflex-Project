@@ -1,0 +1,6 @@
+provider_id,provider_name,department,facility_code
+PRV-101,Metro General Hospital,Cardiology,FAC-A
+PRV-102,Sunrise Health Clinic,Endocrinology,FAC-B
+PRV-103,Pine Valley Medical,Pulmonology,FAC-C
+PRV-104,Summit Oncology Center,Oncology,FAC-D
+PRV-105,Lakeview Family Care,General Medicine,FAC-E
