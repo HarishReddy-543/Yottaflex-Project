@@ -1,6 +1,6 @@
 {
-  "run_id": "BENCHMARK_100000_1793901360",
-  "timestamp": "2026-11-05T17:56:12.260582+00:00",
+  "run_id": "BENCHMARK_100000_1793901846",
+  "timestamp": "2026-11-05T18:04:29.584998+00:00",
   "status": "SUCCESS",
   "profiling_summary": {
     "total_rows": 102000,

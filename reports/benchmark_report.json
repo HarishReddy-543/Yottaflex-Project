@@ -1,8 +1,8 @@
 {
-  "benchmark_timestamp": "2026-11-05T23:26:12.326000Z",
+  "benchmark_timestamp": "2026-11-05T23:34:29.661608Z",
   "dataset_size": 102000,
-  "total_runtime_seconds": 11.524,
-  "throughput_records_per_second": 8851,
+  "total_runtime_seconds": 23.611,
+  "throughput_records_per_second": 4320,
   "valid_published": 97000,
   "quarantined": 5000,
   "reconciliation_status": "BALANCED",

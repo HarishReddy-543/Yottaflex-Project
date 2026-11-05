@@ -37,6 +37,7 @@ ENV/
 *.swo
 
 # Pipeline run artifacts and local databases (keep templates, track reports)
+data/input/benchmark_*.csv
 data/output/*.csv
 data/output/*.parquet
 data/quarantine/*.csv

@@ -1,6 +1,6 @@
 {
-  "run_id": "BENCHMARK_100000_1793901360",
-  "generated_at": "2026-11-05T17:56:12.259906+00:00",
+  "run_id": "BENCHMARK_100000_1793901846",
+  "generated_at": "2026-11-05T18:04:29.584249+00:00",
   "reconciliation_status": "BALANCED",
   "counts": {
     "input_records": 102000,
